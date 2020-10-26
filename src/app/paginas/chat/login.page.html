@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="warning">
     <ion-title text-center>Chelseas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-  <img class="icon" src="assets/icon/chat.png" alt="">
+  <img class="icon" src="assets/icon/chat-01.png" alt="">
 
   <ion-item>
     <ion-label position="floating">Usuario</ion-label>
@@ -18,18 +18,18 @@
     <ion-input type="password" [(ngModel)]="password" name="password" ></ion-input>
   </ion-item>
   <br>
-  <ion-button (click)="OnSubmitLogin()" expand="block">
+  <ion-button (click)="OnSubmitLogin()" expand="block" color="warning">
     Ingresar
   </ion-button>
   <br>  
-  <p text-center routerLink="/registro">Crear Cuenta</p>
+  <p routerLink="/registro">Crear Cuenta</p>
 
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
    <ion-buttons slot="start">
-       <ion-back-button defaultHref="/inicio" color="primary"></ion-back-button>
+       <ion-back-button defaultHref="/inicio" color="warning"></ion-back-button>
    </ion-buttons>
   </ion-toolbar>
 </ion-footer>

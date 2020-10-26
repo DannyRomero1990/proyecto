@@ -7,7 +7,7 @@
 <ion-content >
 
   <ion-list>
-    <ion-item *ngFor="let item of menu" (click)="navegar(item.url)" detail color="danger">
+    <ion-item *ngFor="let item of menu" (click)="navegar(item.url)" detail color="warning">
       <ion-icon slot="start" [name]="item.icono"></ion-icon>
       <ion-label class="mayus">{{item.texto}}</ion-label>
     </ion-item>
