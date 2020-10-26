@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>noticias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div></div>
+    <ion-card *ngFor="let noticia of arrayNoticias; let i=index">
+      <div *ngIf="i<num_noticias">
+        <ion-card-header>
+          <ion-img [src]="noticia.imagen"></ion-img>
+          <ion-card-subtitle>{{noticia.subtitulo}}</ion-card-subtitle>
+          <ion-card-title>{{noticia.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{noticia.contenido}}
+        </ion-card-content>
+
+        <ion-item>
+          <ion-label>Noticia:{{i+1}}</ion-label>
+          
+        </ion-item>
+      </div>
+    </ion-card>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="mostrarNoticias($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="lines-small"
+        loadingText="Cargando noticias...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+   <ion-buttons slot="start">
+       <ion-back-button defaultHref="/inicio" color="warning"></ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

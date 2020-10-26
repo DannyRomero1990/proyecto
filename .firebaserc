@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chelseas-app": {
+      "hosting": {
+        "app": [
+          "chelseas-app"
+        ]
+      }
+    }
+  }
+}
